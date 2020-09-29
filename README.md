@@ -1,33 +1,30 @@
-#RecommendSystem
+Restaurant Recommend System
+=======
 
-WebContent: front-end system, concludes:
+## Introduction <br>
+This is a full-stack web service to improve restaurant searching and recommendation experience based on personalized information <br>
 
-index.html: main html page
+## Purposals <br>
+1. Created Java servlets with `RESTful` APIs and handle HTTP requests and responses <br>  
+2. Designed the whole backend data model, built databases(`MySQL`, `MongoDB`) to capture real-time data from Yelp API <br>
+3. Architected and implemented the interactive web frontend workflow utilizing `HTML`, `CSS` and `JavaScript`. <br>
 
-scripts: JavaScript for index.html(use Jquery and Ajax to simplify the web connection)
+## Architecture
+* ### WebContent 
+The frontend system which concludes: <br>
+1. <b> index.html </b>: Main html page <br>
+2. <b> scripts </b>: `JavaScript` for index.html (use `Jquery` and `AJAX` to simplify the web connection) <br>
+3. <b> style </b>: `CSS` style for index.html <br>
 
-style： css style for index.html
-
-src：the backend system, contains:
-
-db：The program for database. There are two versions (MongoDb/mysql), could use DBConnectionFactory to switch the database
-
-algorithm：Recommendation algorithm, first search items according to the categories of user's favorite items, then sort by the distance.
-
-entity：creat an Item class to filter the information that get from the external api.
-
-external: Call api, we use TickedMaster API in this project. Could change API by simply use ExternalApiFactory
-
-rpc：WebServlet programe， use Restful API
-
-               SearchItem: search nearby items by calling API
-               
-               RecommendItem：return recommendation items.
-               
-               ItemHistory:  return the history of user's favorite items.
-
-
-Web Servlet:
-Recommend for tickets: http://18.216.79.172:8080/Titan/# .         TicketMaster API
-Recommend for restaurants: http://18.216.195.204:8080/Titan/#      Yelp API
-
+* ### src 
+The backend system which contains: <br>
+1. <b> algorithm </b>: Recommendation algorithm. Firstly search items according to the categories of user's favorite items then sort by the distance <br>
+2. <b> db </b>: The database program which has two versions (`MongoDb`/`mysql`). Use DBConnectionFactory to switch the database <br>
+3. <b> entity </b>: Creat an Item class to filter the information that get from the external api <br>
+4. <b> external </b>: Call api. TickedMaster API is used in this project. Use ExternalApiFactory can change API simply <br>
+5. <b> rpc </b>: WebServlet program which use Restful API <br>
+ SearchItem : Search nearby items by calling API <br>
+ RecommendItem : Return recommendation items. <br>
+ ItemHistory : Return the history of user's favorite items.<br>
+ 
+ ## TODO
